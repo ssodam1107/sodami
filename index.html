@@ -1,0 +1,132 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+	<style>
+		html { font-family: 'Iropke Batang', serif; font-weight: 170;}
+		.section{height:600px;width:100%;position: relative;}
+		header{height:300px; background: pink;width:100%; transition: all 0.3s}
+		header #logo{width:400px;text-align: center;height:44px;line-height: 44px;font-size: 2em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 0.3s;color:white}
+		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 100px);top:80px;transition: all 1s}
+		header li{width:70px;height:70px;color:pink;background: white;float:left;border-radius: 10px;text-align: center;line-height: 70px;color:pink;font-size: 2em;margin-left: 20px;margin-right:20px;}
+		h1{color:white;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		h2{color:pink;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		h3{color:black;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		#sectionA{ background: white; transition: all 1s; }
+		#sectionB{ background: url('./dessert39.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionC{ background: url('./mariwhale.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionD{ background: url('./sulbing1.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionE{ background: url('./starbucks.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#titleA{transition: all 1s; font-weight: 400;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+		#titleE{transition: all 1s;}
+	</style>
+</head>
+<body>
+<header id="header">
+	<div id="logo">Where is my dessert?</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">1</li>
+			<li id="menuB">2</li>
+			<li id="menuC">3</li>
+			<li id="menuD">4</li>
+			<li id="menuE">5</li>
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+	<h2 id="titleA">안성의 디저트 맛집을 찾아...</h2>
+</div>
+<div class="section" id="sectionB">
+	<h1 id="titleB">dessert39</h1>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC">Mari Whale 237</h1>
+</div>
+<div class="section" id="sectionD">
+	<h3 id="titleD">설빙</h3>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE">스타벅스</h1>
+</div>
+<div class="section" id="sectionF">
+	<h1 id="titleF">in Anseong</h1>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "70px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "600x";
+			menu.style.top = "-50px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 200px)";
+			menu.style.left = "500px";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+		}
+		if(scrollH > 280){
+			titleA.style.paddingTop = "500px";
+			menuA.style.background = "#FF5A5A";
+		}else{
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "white";
+		}
+		if(scrollH > 548){
+			sectionB.style.backgroundAttachment = "fixed";
+			menuB.style.background = "#FF5A5A";
+		}else{
+			sectionB.style.backgroundAttachment = "scroll";
+			menuB.style.background = "white";
+		}
+		if(scrollH > 980){
+			
+			titleC.style.fontSize = "2em";
+			titleC.style.fontWeight = "700";
+			menuC.style.background = "#FF5A5A";
+		}else{
+			titleC.style.fontSize = "1.5em";
+			titleC.style.fontWeight = "200";
+			menuC.style.background = "white";
+		}
+		if(scrollH > 1816){
+			sectionD.style.backgroundAttachment = "fixed";
+			menuD.style.background = "#FF5A5A";
+		}else{
+			sectionD.style.backgroundAttachment = "scroll";
+			menuD.style.background = "white";
+		}
+		if(scrollH > 2100){
+			titleE.style.fontSize = "2em";
+			titleE.style.fontWeight = "700";
+			menuE.style.background = "#FF5A5A";
+		}else{
+			titleE.style.fontsSize = "1.5em";
+			titleE.style.fontWeight = "200";
+			menuE.style.background = "white";
+		}
+		if(scrollH > 2800){
+		  sectionF.style.background = "white";
+         titleF.style.color = "black";
+         
+         }else{
+      	sectionF.style.background = "pink";
+         titleF.style.color = "pink";
+        }
+
+	}
+</script>
+</body>
